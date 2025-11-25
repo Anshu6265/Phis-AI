@@ -43,7 +43,7 @@ def classify_text(text: str):
     vect = VECTOR.transform([text])
     proba = MODEL.predict_proba(vect)[0]  # [ham_prob, spam_prob]
     spam_prob = float(proba[1])
-    label = "spam" if spam_prob >= 0.5 else "ham"
+    label = "spam" if spam_prob >= 0.75 else "ham"
     return label, spam_prob
 
 # -----------------------------
