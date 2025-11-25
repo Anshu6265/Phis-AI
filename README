@@ -1,0 +1,88 @@
+# 🛡️ PhishAI – Phishing & Spam Detection Backend
+
+PhishAI is a lightweight backend service for classifying phishing and spam text using a pre-trained ML model. Built with FastAPI, it delivers real-time predictions, clean architecture, and flexible model swapping.
+
+## 🚀 Features
+
+- FastAPI-based backend
+
+- ML model + vectorizer for phishing detection
+
+- Real-time text classification
+
+- Modular design: swap model or vectorizer anytime
+
+- CORS-enabled for any frontend
+
+- Lightweight & deploy-ready
+
+## 🧠 How It Works
+
+- The backend loads a vectorizer and trained ML model.
+
+- The user sends plain text to the `/predict` endpoint.
+
+- Text is transformed into numerical features.
+
+- Model predicts phishing or safe.
+
+- JSON response is returned instantly.
+
+## 📦 Project Structure
+
+app.py – FastAPI application  
+model.pkl –  classifier model  
+vector.pkl – model vectors
+
+
+## 🔧 Installation
+
+- Create a virtual environment
+~~~
+python3 -m venv .venv
+source .venv/bin/activate
+~~~
+
+- Install dependencies from requirements.txt
+~~~
+pip install -r requirements.txt
+~~~
+
+- Start the FastAPI server
+~~~
+uvicorn app:app --reload 
+~~~
+
+## 📡 API Endpoints
+
+`POST /predict`
+Send text → receive prediction (phishing / safe)
+
+## 🎯 Use Cases
+
+- Website security dashboards
+
+- Browser extensions
+
+- Automation tools
+
+- Email/message filtering
+
+## 👥 Team
+
+Backend Integration: @Chandrakant6
+
+ML Model: @jenamjain
+
+Frontend: @bhaveshkhobre
+
+UI/UX: Anshu Patel
+
+## 🛠️ Future Enhancements
+
+
+Add message explanation (why classified as phishing)
+
+Add dataset expansion pipeline
+
+Add real-time logs and analytics
